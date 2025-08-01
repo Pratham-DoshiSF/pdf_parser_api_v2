@@ -1,4 +1,4 @@
-markitdown==0.1.2
+markitdown[all]
 beautifulsoup4==4.12.3
 requests==2.32.3
 flask==3.0.0
