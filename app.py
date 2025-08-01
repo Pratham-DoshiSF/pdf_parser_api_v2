@@ -4,9 +4,15 @@ import shutil
 import tempfile
 import uuid
 from markitdown import MarkItDown
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+
+CORS(app)
+app.config["CORS_HEADERS"] = "Content-Type"
+
 md = MarkItDown(enable_plugins=True)
+
 
 @app.route("/pdf_to_markdown", methods=["POST"])
 def pdf_conversion():
